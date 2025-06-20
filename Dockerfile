@@ -14,6 +14,8 @@ FROM scratch AS app
 
 EXPOSE 8080
 
+USER 1234
+
 COPY --from=development /cosign-key/build/cosign-key /cosign-key
 
 CMD [ "/cosign-key" ]
